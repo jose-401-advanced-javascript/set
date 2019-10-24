@@ -13,4 +13,9 @@ describe('Set class', () => {
     testSet.add(value1);
     expect(testSet.array[0]).toBe('apple');
   });
+
+  it('deletes value from a set', () => {
+    testSet.remove('apple');
+    expect(testSet).toEqual({ array: [] });
+  });
 });
