@@ -60,4 +60,11 @@ describe('Set class', () => {
     expect(Set.intersection(set, set2)).toEqual({ array: ['banana'] });
   });
 
+  it('returns the union of two sets via static method', () => {
+    set.add(value1);
+    set.add(value2);
+    set2.add(value2);
+    set2.add(value3);
+    expect(Set.union(set, set2)).toEqual({ array: ['apple', 'banana', 'cherry'] });
+  });
 });

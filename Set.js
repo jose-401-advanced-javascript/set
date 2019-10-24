@@ -58,7 +58,17 @@ class Set {
     return newSet;
   }
 
-  
+  static union(set1, set2) {
+    const newSet = new Set();
+    for(let i = 0; i < set1.array.length; i++) {
+      newSet.add(set1.array[i]);
+    }
+    for(let j = 0; j < set2.array.length; j++) {
+      newSet.add(set2.array[j]);
+    }
+    return newSet;
+  }
+
 }
 
 module.exports = { Set };
