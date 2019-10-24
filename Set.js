@@ -13,6 +13,10 @@ class Set {
       this.array.splice(i, 1);
     }
   }
+
+  has(value) {
+    return this.array.includes(value);
+  }
 }
 
 module.exports = { Set };
