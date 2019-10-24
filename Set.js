@@ -17,6 +17,14 @@ class Set {
   has(value) {
     return this.array.includes(value);
   }
+
+  intersection(set) {
+    const newSet = new Set();
+    for(let i = 0; i < this.array.length; i++) {
+      if(set.array.includes(this.array[i])) newSet.add(this.array[i]);
+    }
+    return newSet;
+  }
 }
 
 module.exports = { Set };
