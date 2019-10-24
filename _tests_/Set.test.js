@@ -67,4 +67,12 @@ describe('Set class', () => {
     set2.add(value3);
     expect(Set.union(set, set2)).toEqual({ array: ['apple', 'banana', 'cherry'] });
   });
+
+  it('returns the difference of two sets via the static method', () => {
+    set.add(value1);
+    set.add(value2);
+    set2.add(value2);
+    set2.add(value3);
+    expect(Set.difference(set, set2)).toEqual({ array: ['apple', 'cherry'] });
+  });
 });
