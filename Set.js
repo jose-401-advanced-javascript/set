@@ -25,6 +25,17 @@ class Set {
     }
     return newSet;
   }
+
+  union(set) {
+    const newSet = new Set();
+    for(let i = 0; i < this.array.length; i++) {
+      newSet.add(this.array[i]);
+    }
+    for(let j = 0; j < set.array.length; j++) {
+      newSet.add(set.array[j]);
+    }
+    return newSet;
+  }
 }
 
 module.exports = { Set };

@@ -35,4 +35,12 @@ describe('Set class', () => {
     set2.add(value3);
     expect(set.intersection(set2)).toEqual({ array: ['banana'] });
   });
+
+  it('returns union of two sets', () => {
+    set.add(value1);
+    set.add(value2);
+    set2.add(value2);
+    set2.add(value3);
+    expect(set.union(set2)).toEqual({ array: ['apple', 'banana', 'cherry'] });
+  });
 });
