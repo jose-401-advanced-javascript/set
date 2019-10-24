@@ -49,6 +49,16 @@ class Set {
     }
     return newSet;
   }
+
+  static intersection(set1, set2) {
+    const newSet = new Set();
+    for(let i = 0; i < set2.array.length; i++) {
+      if(set1.array.includes(set2.array[i])) newSet.add(set2.array[i]);
+    }
+    return newSet;
+  }
+
+  
 }
 
 module.exports = { Set };

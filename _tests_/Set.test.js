@@ -50,5 +50,14 @@ describe('Set class', () => {
     set2.add(value2);
     set2.add(value3);
     expect(set.difference(set2)).toEqual({ array: ['apple', 'cherry'] });
-  });  
+  });
+
+  it('returns the intersection of two sets via static method', () => {
+    set.add(value1);
+    set.add(value2);
+    set2.add(value2);
+    set2.add(value3);
+    expect(Set.intersection(set, set2)).toEqual({ array: ['banana'] });
+  });
+
 });
